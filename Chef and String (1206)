@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void fun()
+{
+    string s;
+    cin>>s;
+    
+    string a=s[s.size()-1]+ s.substr(0,s.size()-1);
+    string b=s.substr(1)+s[0];
+    
+    if(a==b)cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+}
+
+int main(){
+    
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        fun();
+    }
+    
+    
+    return 0;
+}
