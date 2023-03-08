@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int MOD = 1e8+7;
+
+void solve() {
+    int n;
+    cin >> n;
+
+    vector<int> v(n);
+    map<int, int> mp;
+    for (auto& x : v) {
+        cin >> x;
+        mp[x]++;
+    }
+
+    int cnt = 0;
+    for (const auto& x : mp) {
+        cnt = max(cnt, x.second);
+    }
+
+    cout << n - cnt << '\n';
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+
+    return 0;
+}
