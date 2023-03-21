@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main() {
+	int t;cin>>t;
+	while(t--){
+	    int n;cin>>n;
+	    string s;cin>>s;vector<char> a;
+	    for(int i=0;i<n;i++){
+	        if(s[i]=='H' || s[i]=='T'){
+	            a.push_back(s[i]);
+	         }
+	    }
+	    int l=a.size();int f=1;
+	    if(l%2==0){
+	        for(int i=0;i<l;i++){
+	            if(i%2==0){
+	                if(a[i]=='T') f=0;
+	            }
+	            else{
+	                if(a[i]=='H') f=0;
+	            }
+	        }
+	        if(f==1) cout<<"Valid"<<endl;
+	        else cout<<"Invalid"<<endl;
+	        
+	    }
+	    else{
+	        cout<<"Invalid"<<endl;
+	    }
+	   
+	}
+	return 0;
+}
